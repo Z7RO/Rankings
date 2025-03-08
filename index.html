@@ -1,36 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="less/main.less">
-    <title>Vite App</title>
-  </head>
-  <body>
-    <main>
-      <section class="table-rankings">
-        <h1>Lista de Deportes</h1>
-        <table>
-            <thead>
-                <tr class>
-                    <th>Posición</th>
-                    <th>Nombre del Equipo</th>
-                    <th>Partidos Jugados</th>
-                    <th>Partidos Ganados</th>
-                    <th>Partidos Empatados</th>
-                    <th>Goles a Favor</th>
-                    <th>Goles en Contra</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each RankingFutbol}}
-                    {{> TablasRanking this}}
-                {{/each}}
-            </tbody>
-        </table>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="less/main.less">
+  <title>Vite App</title>
+</head>
+
+<body>
+  {{>header}}
+  <main>
+    <section class="table-rankings">
+      <h1>Lista de Deportes</h1>
+      <table>
+        <thead>
+          <tr class>
+            <th>Posición</th>
+            <th>Nombre del Equipo</th>
+            <th>Partidos Jugados</th>
+            <th>Partidos Ganados</th>
+            <th>Partidos Empatados</th>
+            <th>Goles a Favor</th>
+            <th>Goles en Contra</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each RankingFutbol}}
+          {{> TablasRanking this}}
+          {{/each}}
+        </tbody>
+      </table>
     </section>
 
-    </main>
-  </body>
+  </main>
+</body>
+
 </html>

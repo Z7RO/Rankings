@@ -3,6 +3,7 @@ import { rankings as rankingData } from "./pages/rankings";
 export const getPageContext = (pagePath)=>{
     console.log("Page to Load Context:", pagePath)
     const commonVariables = {
+
     }
 
     let pageVariables = {};
